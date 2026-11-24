@@ -1,12 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load Day 3 dataset
 df = pd.read_csv("employees.csv")
 
-# ---------------------------------------------------------
-# 1. Bar Chart: Average Salary per Department
-# ---------------------------------------------------------
 avg_salary = df.groupby("department")["salary"].mean()
 
 fig, ax = plt.subplots(figsize=(8, 5))
@@ -21,9 +17,6 @@ plt.tight_layout()
 plt.savefig("avg_salary_by_dept.png", dpi=300)
 plt.close()
 
-# ---------------------------------------------------------
-# 2. Histogram: Distribution of Salaries (5 Bins)
-# ---------------------------------------------------------
 plt.figure(figsize=(8, 5))
 plt.hist(df["salary"], bins=5, color="mediumseagreen", edgecolor="black")
 
@@ -35,9 +28,6 @@ plt.tight_layout()
 plt.savefig("salary_histogram.png", dpi=300)
 plt.close()
 
-# ---------------------------------------------------------
-# 3. Scatter Plot: ID vs Salary Colored by Department
-# ---------------------------------------------------------
 plt.figure(figsize=(8, 5))
 
 for dept, group in df.groupby("department"):
@@ -52,9 +42,6 @@ plt.tight_layout()
 plt.savefig("id_vs_salary_scatter.png", dpi=300)
 plt.close()
 
-# ---------------------------------------------------------
-# 4. Line Chart: Monthly Sales (Jan to Jun) with Markers
-# ---------------------------------------------------------
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 sales = [12, 15, 14, 18, 22, 25]
 
