@@ -1,0 +1,10 @@
+GitHub Pull Request checklist
+
+1. Create a repository on GitHub.
+2. Upload the Main/Week_1/Day_5 folder contents or clone the repository and copy these folders into it.
+3. Create a feature branch: git checkout -b feature/week1-day5-analysis
+4. Stage files: git add .
+5. Commit: git commit -m "Complete Week 1 Day 5 employee analysis"
+6. Push: git push -u origin feature/week1-day5-analysis
+7. On GitHub, open a Pull Request targeting main.
+8. Add a short description, request trainer review, and merge after approval.
